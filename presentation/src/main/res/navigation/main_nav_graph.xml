@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.presentation.presentation.view.MainFragment"
+        android:label="MainFragment" />
+    <fragment
+        android:id="@+id/manNameFragment"
+        android:name="com.example.presentation.presentation.view.ManNameFragment"
+        android:label="ManNameFragment" />
+    <fragment
+        android:id="@+id/womanNameFragment"
+        android:name="com.example.presentation.presentation.view.WomanNameFragment"
+        android:label="WomanNameFragment" />
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.presentation.presentation.view.ResultFragment"
+        android:label="ResultFragment" />
+</navigation>
