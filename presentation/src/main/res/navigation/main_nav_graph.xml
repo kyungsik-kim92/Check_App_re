@@ -6,18 +6,30 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.presentation.presentation.view.MainFragment"
-        android:label="MainFragment" />
+        android:name="com.example.presentation.view.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_womanNameFragment"
+            app:destination="@id/womanNameFragment" />
+    </fragment>
     <fragment
         android:id="@+id/manNameFragment"
-        android:name="com.example.presentation.presentation.view.ManNameFragment"
-        android:label="ManNameFragment" />
+        android:name="com.example.presentation.view.ManNameFragment"
+        android:label="ManNameFragment" >
+        <action
+            android:id="@+id/action_manNameFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
     <fragment
         android:id="@+id/womanNameFragment"
-        android:name="com.example.presentation.presentation.view.WomanNameFragment"
-        android:label="WomanNameFragment" />
+        android:name="com.example.presentation.view.WomanNameFragment"
+        android:label="WomanNameFragment" >
+        <action
+            android:id="@+id/action_womanNameFragment_to_manNameFragment"
+            app:destination="@id/manNameFragment" />
+    </fragment>
     <fragment
         android:id="@+id/resultFragment"
-        android:name="com.example.presentation.presentation.view.ResultFragment"
+        android:name="com.example.presentation.view.ResultFragment"
         android:label="ResultFragment" />
 </navigation>

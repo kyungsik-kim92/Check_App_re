@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".presentation.view.ResultFragment">
+        tools:context=".view.ResultFragment">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -69,13 +69,13 @@
             android:background="@drawable/name_setting_btn_frame"
             android:text="메인으로"
             android:layout_margin="26dp"
-            android:onClick="@{fragment::clickBackMainBtn}"
             android:textSize="17sp"
             android:padding="10dp"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+<!--            android:onClick="@{fragment::clickBackMainBtn}"-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

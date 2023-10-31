@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".presentation.view.WomanNameFragment">
+        tools:context=".view.WomanNameFragment">
 
 
         <LinearLayout
@@ -47,7 +47,6 @@
             android:gravity="center"
             android:background="@drawable/name_setting_btn_frame"
             android:text="다음으로"
-            android:onClick="@{fragment::nextBtnClick}"
             android:layout_margin="16dp"
             android:textSize="17sp"
             android:padding="10dp"
@@ -56,6 +55,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
+<!--            android:onClick="@{fragment::nextBtnClick}"-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

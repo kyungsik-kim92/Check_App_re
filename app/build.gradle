@@ -2,12 +2,12 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
-    id 'dagger.hilt.android.plugin'
+//    id 'dagger.hilt.android.plugin'
 }
 
 android {
     namespace 'com.example.check_app'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.example.check_app"
@@ -55,10 +55,10 @@ dependencies {
     androidTestImplementation (TestTool.ANDROID_X_ESPRESSO)
 
     // dager hilt
-    implementation (DaggerHilt.DAGGER_HILT)
-    kapt (DaggerHilt.DAGGER_HILT_COMPILER)
-//    implementation (DaggerHilt.DAGGER_HILT_VIEW_MODEL)
-    kapt (DaggerHilt.DAGGER_HILT_ANDROIDX_COMPILER)
+//    implementation (DaggerHilt.DAGGER_HILT)
+//    kapt (DaggerHilt.DAGGER_HILT_COMPILER)
+////    implementation (DaggerHilt.DAGGER_HILT_VIEW_MODEL)
+//    kapt (DaggerHilt.DAGGER_HILT_ANDROIDX_COMPILER)
 
     // Retrofit
     implementation (Retrofit.RETROFIT)
