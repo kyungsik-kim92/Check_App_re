@@ -31,5 +31,9 @@
     <fragment
         android:id="@+id/resultFragment"
         android:name="com.example.presentation.view.ResultFragment"
-        android:label="ResultFragment" />
+        android:label="ResultFragment" >
+        <action
+            android:id="@+id/action_resultFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
 </navigation>

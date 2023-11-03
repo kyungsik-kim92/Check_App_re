@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
+        <variable
+            name="fragment"
+            type="com.example.presentation.view.WomanNameFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -29,33 +32,32 @@
                 android:text="여자의 이름을 입력하세요"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
+
             <EditText
                 android:id="@+id/edit_txt"
-                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:hint="이름을 이곳에 입력하세요"
-                android:textSize="15sp"
-                />
+                android:textSize="15sp" />
         </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:background="@drawable/name_setting_btn_frame"
-            android:text="다음으로"
             android:layout_margin="16dp"
-            android:textSize="17sp"
+            android:background="@drawable/name_setting_btn_frame"
+            android:gravity="center"
+            android:onClick="@{fragment::nextBtnClick}"
             android:padding="10dp"
+            android:text="다음으로"
             android:textColor="@color/white"
+            android:textSize="17sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-<!--            android:onClick="@{fragment::nextBtnClick}"-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

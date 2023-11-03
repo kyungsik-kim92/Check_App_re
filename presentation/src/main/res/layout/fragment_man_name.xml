@@ -4,6 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+        <variable
+            name="fragment"
+            type="com.example.presentation.view.ManNameFragment" />
 
     </data>
 
@@ -49,13 +52,13 @@
             android:layout_margin="16dp"
             android:textSize="17sp"
             android:padding="10dp"
+            android:onClick="@{fragment::nextBtnClick}"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
 
-<!--            android:onClick="@{fragment::nextBtnClick}"-->
         <ProgressBar
             android:id="@+id/progressBar"
             style="?android:attr/progressBarStyle"
