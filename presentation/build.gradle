@@ -3,12 +3,13 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'com.google.dagger.hilt.android'
+    id 'com.google.gms.google-services'
 }
 
 
 android {
     namespace 'com.example.presentation'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         minSdk 24
@@ -46,11 +47,11 @@ dependencies {
     implementation (Google.MATERIAL)
     implementation (AndroidX.CONSTRAINT_LAYOUT)
     implementation (AndroidX.LEGACY)
-    implementation (Firebase.FIREBASE_DATABASE_KTX)
-    implementation (Firebase.FIREBASE_FIRESTORE_KTX)
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.10.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.firebase:firebase-database:20.3.0'
+    implementation 'com.google.firebase:firebase-firestore:24.9.1'
     testImplementation (TestTool.JUNIT)
     androidTestImplementation (TestTool.ANDROID_X_JUNIT)
     androidTestImplementation (TestTool.ANDROID_X_ESPRESSO)

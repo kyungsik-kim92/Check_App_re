@@ -2,25 +2,42 @@ package com.example.check_app.di
 
 import com.example.data.remote.api.LoveCalculatorApi
 import com.example.data.repository.remote.datasource.MainDataSource
+import com.example.data.repository.remote.datasource.SplashDataSource
 import com.example.data.repository.remote.datasourceimpl.MainDataSourceImpl
+import com.example.data.repository.remote.datasourceimpl.SplashDataSourceImpl
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.firestore.FirebaseFirestore
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
 class DataSourceModule {
 
     @Provides
+    @Singleton
     fun provideMainDataSource(
         loveCalculatorApi: LoveCalculatorApi,
-//        firebaseRtdb: FirebaseDatabase,
-//        fireStore: FirebaseFirestore
-    ): MainDataSource {
+        ): MainDataSource {
         return MainDataSourceImpl(
-            loveCalculatorApi,
-//            firebaseRtdb, fireStore
+            loveCalculatorApi
+
+            )
+    }
+
+    @Provides
+    @Singleton
+    fun provideSplashDataSource(
+        firebaseRtdb: FirebaseDatabase,
+        fireStore: FirebaseFirestore
+    ): SplashDataSource {
+        return SplashDataSourceImpl(
+            firebaseRtdb = firebaseRtdb, fireStore = fireStore
         )
     }
+
 }
