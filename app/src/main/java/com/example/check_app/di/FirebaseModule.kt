@@ -8,20 +8,18 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
-class FirebaseModule {
+@Module
+@InstallIn(SingletonComponent::class)
+object FirebaseModule {
 
-    @Module
-    @InstallIn(SingletonComponent::class)
-    object FirebaseModule {
+    @Provides
+    @Singleton
+    fun provideFirebaseRTDB() = FirebaseDatabase.getInstance()
 
-        @Provides
-        @Singleton
-        fun provideFirebaseRTDB() = FirebaseDatabase.getInstance()
-
-        @Provides
-        @Singleton
-        fun provideFirebaseStore(): FirebaseFirestore {
-            return FirebaseFirestore.getInstance()
-        }
+    @Provides
+    @Singleton
+    fun provideFirebaseStore(): FirebaseFirestore {
+        return FirebaseFirestore.getInstance()
     }
 }
+

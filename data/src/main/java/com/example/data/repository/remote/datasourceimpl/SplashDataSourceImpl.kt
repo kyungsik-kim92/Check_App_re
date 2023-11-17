@@ -8,11 +8,11 @@ import com.google.firebase.firestore.FirebaseFirestore
 import javax.inject.Inject
 
 class SplashDataSourceImpl @Inject constructor(
-    private val firebaseRtdb : FirebaseDatabase,
+    private val firebaseRtdb: FirebaseDatabase,
     private val fireStore : FirebaseFirestore
-)  : SplashDataSource{
+) : SplashDataSource {
     override fun checkAppVersion(): Task<DataSnapshot> {
-        return  firebaseRtdb.reference.child("version").get()
+        return firebaseRtdb.reference.child("version").get()
     }
 
 
